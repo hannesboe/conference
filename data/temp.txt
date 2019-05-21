@@ -1,0 +1,256 @@
+Speaker: A person that can have one or multiple talks
+        Location: A location where a conference takes place
+        Conference: A conference where talks are held with a start and end date (duration)
+        Room: A room in a location
+        Topic: An ontology of topics (one topic can have one or multiple parents and one or multiple children)
+        Talk: 
+            A talk is spoken by one or more speakers, on a specific conference in a specific room at a specific time. 
+            A talk can be held on multiple conferences
+            A talk has one or multiple Topics
+    Required views (singly or combined)
+        List of locations
+        List of conferences
+        All talks in a conference (global view)
+        All talks for a specific room in a conference sorted by date and time (room flyer)
+
+
+Sign up or log in to bookmark your favorites and sync them to your phone or calendar.
+
+Sunday, December 9
+ 
+2:00pm
+Badge Pickup at WSCC Badge Pickup at Grand Hyatt Badge Pickup at Hyatt Olive 8 Badge Pickup at Renaissance Badge Pickup at Sheraton Badge Pickup at Westin
+5:00pm
+Kubernetes Contributor Summit (Additional registration required)
+ 
+Monday, December 10
+ 
+8:00am
+Kubernetes Contributor Summit (Additional registration required) Badge Pickup at The Conference Center (TCC) OpenShift Commons Gathering by Red Hat (Additional registration + fee required) Badge Pickup at Hyatt Badge Pickup at Hyatt Olive 8 Badge Pickup at Renaissance Badge Pickup at Sheraton Badge Pickup at Westin Badge Pickup at WSCC
+8:30am
+Get Hands on with HPE Hybrid Cloud and Container Solutions (Additional registration required) Cloud Native Storage Day (Additional registration required)
+9:00am
+Deploying Serverless Apps to Kubernetes with Knative by Google Cloud (Additional registration + fee required) Using Istio and GKE On Prem to Manage On-Prem Data Center Downtime and Maintenance (Additional registration + fee required) Getting to Continuous Delivery For Your Cloud-Native Applications (Additional registration + fee required) Kubernetes and Service Mesh Workshop with VMware (Additional registration + fee required) Ballerinacon - Writing Microservices with a Cloud Native Programming Language (Additional registration required) Fast Data (FD.io) Project Mini Summit (Additional registration required) Kubernetes II -- Advanced Hands-on Training (Additional registration + fee required) The Cloud Native Culture & Industry Summit by Oracle (Additional registration required) The GAME CHANGER-- Navigating Container and Kubernetes (Additional registration + fee required) Your Path to Production Ready Kubernetes by Weaveworks (Additional registration + fee required) Cloud Foundry Day (Additional registration + fee required) EnvoyCon (Additional registration + fee required) FoundationDB Summit (Additional registration + fee required) Observability Practitioners Summit (Additional registration + fee required)
+9:30am
+The Cloud Native Enterprise Summit by Google Cloud (Additional registration + fee required) KubeSec Enterprise Summit by Aqua Security (Additional registration + fee required)
+10:00am
+Tungsten Fabric Developers Summit (additional registration required)
+12:00pm
+Get the Cert: Build Your Next App With Kubernetes + Istio (Pre-Registration is Required; Details in Description) Kubernetes I – Intro to Kubernetes (Additional registration + fee required)
+1:00pm
+DigitalOcean TIDE: Kubernetes Unconference (Additional registration required) Linkerd in Production 101 by Buoyant (Additional registration + fee required)
+4:00pm
+Kick-off KubeCon with IBM Cloud Garage’s ArcadeCon (Pre-Registration is Required; Details in Description)
+5:00pm
+Lightning Talk: Introduction to GitOps Deployment to Kubernetes - Jun Sakata, Ubie, Inc.
+5:05pm
+Lightning Talk: Overengineering your Chatbot for Fun and Science - Andrew Gao, Capital One
+5:10pm
+Lightning Talk: CRDs Aren't Just for Add-Ons Anymore - Painting a Picture of the Future - Tim Hockin, Google
+5:15pm
+Lightning Talk: Labels in Prometheus Alerts: Think Twice Before Using Them - Elena Morozova, Weaveworks
+5:20pm
+Lightning Talk: Behind The Scenes: Kubernetes Release Notes Tips & Tricks - Mike Arpaia, Kolide
+5:25pm
+Lightning Talk: Monitoring Kubernetes with BPF and Prometheus - Jonathan Perry, Flowtune
+5:45pm
+Lightning Talk: Spawning Kubernetes In CI For Integration Tests - Marko Mudrinić, Loodse
+5:50pm
+Lightning Talk: Running Kubernetes in the Federal Government - John Osborne, Red Hat
+5:55pm
+Lightning Talk: Optimizing Kubernetes Networking at Datadog - Laurent Bernaille, Datadog
+6:00pm
+
+
+create (:Talk {name: "Connect from Browsers Using gRPC-Web", description: "", type:"talk"})
+create (:Talk {name: "Connect from Browsers Using gRPC-Web", description: "", type:"workshop"})
+
+
+
+Lightning Talk: Connect from Browsers Using gRPC-Web - Stanley Cheung, Google LF Networking Reception
+6:05pm
+Lightning Talk: How You Too Can Find a Needle in the Haystack - Shreya Sharma, Expedia Inc.
+6:10pm
+Lightning Talk: The Future of Humans in a World of Automation - Kendall Miller, ReactiveOps
+6:30pm
+Lightning Talk: Cloud TPU? Don’t Mind If I Do - Nathan Murthy, Tesla
+6:35pm
+Lightning Talk: How Fast Was My Database? - Josh Berkus, Red Hat
+6:40pm
+Lightning Talk: Kubernetes Community, A Story Told by Emojis and Slack Data - Paris Pittman, Google
+6:45pm
+Lightning Talk: CoreDNS Over gRPC: Reliable Service Discovery for Kubernetes - Yong Tang, MobileIron, Inc.
+6:50pm
+Lightning Talk: PID Autoscaling Strava's Linkerd Service Mesh Using Prometheus Data - J Evans, Strava
+6:55pm
+Lightning Talk: Kubegres: Accessing K8s From Postgres - Liz Frost, Heptio
+7:00pm
+EmpowHER Reception sponsored by Comcast
+ 
+Tuesday, December 11
+ 
+7:00am
+Badge Pickup at Hyatt Badge Pickup at Hyatt Olive 8 Badge Pickup at Renaissance Badge Pickup at Sheraton Badge Pickup at Westin Badge Pickup at WSCC
+7:30am
+The New Stack Pancake Breakfast & Podcast: Mono to Micro to FaaS: A Macro Challenge, Sponsored by Oracle Breakfast Sponsor Showcase
+9:00am
+Keynote: Opening Remarks + CNCF Community Updates – Liz Rice, Technology Evangelist, Aqua Security
+9:18am
+Keynote: Helm Update - Michelle Noorali, Senior Software Engineer, Microsoft
+9:25am
+Keynote: Envoy Update – Matt Klein, Senior Software Engineer, Constance Caramanolis, Software Engineer, & Jose Nino, Software Engineer, Lyft
+9:32am
+Keynote: 5 Years of etcd: Past, Present, and Future - Brandon Philips, CTO CoreOS, Red Hat & Xiang Li, Senior Staff Software Engineer, Alibaba
+9:44am
+Keynote: Kubernetes, Istio, Knative: The New Open Cloud Stack - Aparna Sinha, Group Product Manager for Kubernetes, Google
+9:51am
+Keynote: Charting a Path to Take Kubernetes to 100,000 Enterprises - Wendy Cartee, Senior Director of Cloud Native Advocacy, VMware
+9:58am
+Keynote: Phippy Goes to the Zoo: A Kubernetes Story - Matt Butcher, Principal Software Engineer & Karen Chu, Community Manager, Microsoft
+10:18am
+Keynote: Closing Remarks – Janet Kuo, Software Engineer, Google
+10:20am
+Coffee Break
+10:30am
+Meet the Maintainer: Cortex, CNI - Bryan Boreham, Weaveworks Meet the Maintainer: Fluentd/Fluent Bit - Eduardo Silva, Treasure Data
+10:50am
+Getting The Most Out Of Kubernetes with Resource Limits and Load Testing - Harrison Harnisch, Buffer Intro: KubeVirt BoF - Daniel Gonzalez Nothnagel, SAP & Ryan Hallisey, Red Hat Cloud Jumping with Kubernetes - James Bowes, Manifold Birds of a Feather: What Should a Container Build Manifest Look Like? - Nisha Kumar, VMware Panel Discussion: Growing Diversity in Open Source Projects – Moderated by Orna Berryman, Google Towards a Vendor Neutral Kubernetes - Andrew Kim, DigitalOcean Real-time Vision Processing on Kubernetes: Working with Data Locality - Yisui Hu, Google Intro: Apps SIG - Adnan Abdulhussein, Bitnami Intro: Auth SIG - Jordan Liggitt & Tim Allclair, Google Intro: CNCF Trail Map - Dee Kumar, Cloud Native Computing Foundation Intro: IBMCloud SIG - Sahdev Zala & Richard Theis, IBM Intro: VMware SIG - Fabio Rapposelli & Steve Wong, VMware Experience Report: Running a Distributed System Across Kubernetes Clusters - Alex Robinson, Cockroach Labs On the OSS Path to Full Observability with Grafana - David Kaltschmidt, Grafana Labs Day Two Kubernetes: Tools for Operability - Bridget Kromhout & Zachary Deptawa, Microsoft How Symlinks Pwned Kubernetes (And How We Fixed It) - Michelle Au, Google & Jan Šafránek, Red Hat Tutorial: Building & Running Kubernetes from Source and Submitting Your First PR - Ian Chakeres, Silvia Xu, Michael Taufen, & Federico Bongiovanni, Google (Limited Seating Available - See Description for Detail... Tutorial: Developing Production Ready Cloud Native NATS Applications - Waldemar Quevedo & Colin Sullivan, Synadia (Limited Seating Available - See Description for Details) Tutorial: Using Istio - Lee Calcote & Girish Ranganathan, SolarWinds (Limited Seating Available - See Description for Details)
+11:00am
+Meet the Ambassador: Bob Killen, University of Michigan Meet the Maintainer: Fluentd/Fluent Bit - Eduardo Silva, Treasure Data
+11:30am
+Meet the Ambassador: Bob Killen, University of Michigan Meet the Maintainer: Envoy - Constance Caramanolis, Lyft
+11:40am
+Front-end Application Deployment Patterns - Ross Kukulinski, Heptio Intro: SAFE BoF - Jeyappragash Jeyakeerthi, padme.io & Dan Shaw, danshaw, LLC Container Platforms as Equalizers: Running Health Services Across the World - Jamie Hewland, Praekelt.org Behind Your PR: How Kubernetes Uses Kubernetes to Run Kubernetes CI - Sen Lu & Benjamin Elder, Google The Art of Documentation for Open Source Projects - Ben Hall, Katacoda The Future of Your CRDs – Evolving an API - Stefan Schimanski, Red Hat & Mehdy Bohlool, Google Using Kubernetes to Offer Scalable Deep Learning on Alibaba Cloud - Kai Zhang & Yang Che, Alibaba Intro: Cluster Lifecycle SIG – Robert Bailey, Google & Timothy St. Clair, Heptio Intro: Harbor - Steven Zou & Henry Zhang, VMware Intro: Service Catalog SIG - Jonathan Berkhahn, IBM & Carolyn Van Slyck, Microsoft Azure Intro: Storage SIG - Saad Ali, Google Intro: Virtual Kubelet - Ria Bhatia, Microsoft & Ben Corrie, VMware Clusters as Cattle - Wrangling Clusters Not Just Nodes - Illya Chekrygin, Upbound Linkerd 2.0, Now with Extra Prometheus - Andrew Seigner, Buoyant & Frederic Branczyk, CoreOS Don’t Forget the Data When Embarking on Your Journey to Service Meshes - Shriram Rajagopalan, VMware Securing Kubernetes With Admission Controllers - Dave Strebel, Microsoft
+12:15pm
+Lunch
+12:30pm
+Meet the Maintainer: Kubernetes - Lucas Käldström, Independent
+1:00pm
+Meet the Ambassador: Baruch Sadogursky, JFrog
+1:30pm
+Meet the Ambassador: Baruch Sadogursky, JFrog
+1:45pm
+Scale Your Service on What Matters: Autoscaling on Latency - Thomas Rampelberg, Buoyant Deep Dive: KubeVirt BoF - Scott Collier, Red Hat & Ben Warren, Cisco Cloud Native Transformation - Pavel Nikolov & Matt Hope, Fairfax Media Kubernetes and The GitOps Face-Off - Ricardo Aravena & Javeria Khan, Branch Metrics Exploring Our User-Base Challenges: Getting Insight From StackOverflow‍ - Javier Salmeron, Bitnami Using a Managed Kubernetes Service in the Enterprise - Sujit D'Mello & Daniel Selman, Microsoft Scaling AI Inference Workloads with GPUs and Kubernetes - Renaud Gaubert & Ryan Olson, NVIDIA Intro: Envoy - Matt Klein & Constance Caramanolis, Lyft Intro: Kubernetes SIG Multicluster - Daneyon Hansen, Cisco, Quinton Hoole & Irfan Ur Rehman, Huawei Intro: Release SIG - Tim Pepper, VMware & Aishwarya Sundar, Google Intro: Telepresence - Rafael Schloming, Datawire & Adnan Abdulhussein, Bitnami Intro: TUF/Notary - Justin Cappos, NYU & Justin Cormack, Docker Highly Available Kubernetes Clusters - Best Practices - Meaghan Kjelland & Karan Goel, Google Water, Water, Everywhere: Making Kubernetes Audit Logs Potable - Kate Kuchin, Heptio What's Next for etcd Cluster Management? - Gyuho Lee, Amazon Web Services & Sam Batschelet, Red Hat Recent Advancements in Container Isolation - Tim Allclair & Adin Scannell, Google Tutorial: Hands-on Gitops - Brice Fernandes, Weaveworks (Limited Seating Available - See Description for Details) Tutorial: KataContainers the Hard Way: Kubernetes + containerd + KataContainers - Lei Zhang, Alibaba & Xu Wang, HyperHQ (Limited Seating Available - See Description for Details) Tutorial: Kubeflow End-to-End: GitHub Issue Summarization - Michelle Casbon & Amy Unruh, Google (Limited Seating Available - See Description for Details)
+2:30pm
+Meet the Maintainer: Helm - Scott Rigby, Codeacademy
+2:35pm
+Connecting and Testing Virtual Network Topologies on Kubernetes - Rich Renner & Gage Orsburn, One Source Integrations Intro: Knative Productivity BoF - Srinivas V. Hegde & Adriano Cunha, Google The Evolution of the AppDirect Kubernetes Network Infrastructure - Pierre Lacerte & Alex Gervais, AppDirect Migrating Jenkins to Kubernetes Broke Our Brains - Jonathan Hess & Loren Trout, SAP Panel Discussion: Community Building from Scratch: Sharing Experience of CNCF and K8s Meetups – Moderated by Mars Toktonaliev, Nokia Public Technical Oversight Committee (TOC) Meeting – Moderated by Liz Rice, Aqua Security Peloton - A Unified Scheduler for Web-scale Workloads on Mesos & Kubernetes - Min Cai & Nitin Bahadur, Uber Machine Learning Model Serving and Pipeline Using KNative - Animesh Singh & Tommy Li, IBM Deep Dive: Envoy - Matt Klein & Constance Caramanolis, Lyft Intro: Cloud Native Buildpacks – Terence Lee & Joe Kutner, Salesforce Heroku Intro: CNCF Cross-Cloud CI - Denver Williams, Debian & Taylor Carpenter, Vulk Coop Intro: Contributor Experience SIG - Paris Pittman, Google & Elsie Phillips, Red Hat Intro: OpenStack SIG - Chris Hoge, OpenStack Foundation & David Lyle, Intel Exploring Application Portability Across Public Cloud Providers Using K8s - Erin Boyd & Ivan Font, Red Hat Debugging etcd - Joe Betz & Jingyi Hu, Google Hardening Kubernetes Setups: War Stories from the Trenches of Production - Puja Abbassi, Giant Swarm
+3:10pm
+Coffee Break sponsored by Capgemini
+3:40pm
+Kubernetes Is Not For Developers and Other Things the Hype Never Told You - Taylor Thomas & Jordan Olshevski, Microsoft Intro: Network Service Mesh BoF - Ed Warnicke, Cisco & Frederick F. Kautz IV, Red Hat Kubernetes at Reddit: An Origin Story - Greg Taylor, Reddit, Inc Kustomize: Deploy Your App with Template Free YAML - Ryan Cox, Lyft Enhancing Kubernetes: A Journey Through the KEP Process - Stephen Augustus, Red Hat & Jaice Singer DuMars, Google Building your own PostgreSQL-as-a-Service on Kubernetes. - Alexander Kukushkin, Zalando SE Machine Learning as Code: and Kubernetes with Kubeflow - Jason " Jay" Smith, Google & David Aronchick Intro: containerd - Mike Brown, IBM & Derek McGowan, Docker Intro: CoreDNS - Yong Tang, MobileIron, Inc & Cricket Liu, Infoblox Intro: Falco - Loris Degioanni, Sysdig Intro: Fluentd - Eduardo Silva & Masahiro Nakagawa, Treasure Data Intro: Vitess - Dan Kozlowski & Sugu Sougoumarane, PlanetScale Use the Cluster API to Deploy Clusters On-Prem and in Public Clouds - Loc Nguyen, VMware & Kris Nova, Heptio Observability is the Key Tenet of Running a Multi-Tenant K8s Environment - Thom McCann & Amreth Chandrasehar, T-Mobile Rightsize Your Pods with Vertical Pod Autoscaling - Beata Skiba, Google Athenz with Istio: Single Access Control Model in Cloud Infrastructures - Tatsuya Yano, Yahoo Japan Corporation Tutorial: Deploying Windows Apps with Draft, Helm and Kubernetes - Patrick Lang & Jessica Deen, Microsoft (Limited Seating Available - See Description for Details) Tutorial: Getting Your Hands Dirty with Knative - Bas Tichelaar & Adé Mochtar, Instruqt (Limited Seating Available - See Description for Details) Tututorial: Building Security into Kubernetes Deployment Pipelines – Andrew Martin & Pi Unnerup, ControlPlane; Michael Hough & Liam White, IBM (Limited Seating Available - See Description for Details)
+4:30pm
+Becoming Cloud Native Without Starting From Scratch - Marin Jankovski, GitLab Intro: Operator Framework BoF - Diane Mueller & Sebastian Pahl, Red Hat CI/CD in Light Speed with K8s and Argo cd - Billy Yuen & Parin Shah, Intuit CI/CD, Kubernetes, and Databases: Better Together - Niraj Tolia & Tom Manville, Kasten The Cloud Native Meetup Community A-Z - Moderated by Kaslin Fields, Oracle Using a Kubernetes Operator to Manage Application Tenancy in a B2B SaaS App - Mike Arpaia, Kolide Why Data Scientists Love Kubernetes - Sophie Watson & William Benton, Red Hat Intro: CNCF Serverless WG / CloudEvents - Doug Davis, IBM & Clemens Vasters, Microsoft Intro: Helm - Matt Farina, Samsung SDS Intro: NATS - Colin Sullivan & Wally Quevedo, Synadia Intro: OpenMetrics - Richard (RichiH) Hartmann, SpaceNet AG Intro: Rook - Jared Watts, Upbound Clusters All the Way Down: Crazy Multi-cluster Topologies - Matt Caulfield, Oort Three Pillars, Zero Answers: We Need to Rethink Observability - Ben Sigelman, LightStep A Basic Kubernetes Debugging Kit: curl, jq, openssl, and Other Best Friends - Joe Thompson, Mesosphere This Year, It’s About Security - Maya Kaczorowski & Brandon Baker, Google
+
+
+match (s1:Speaker) where s1.firstName = "Ria"
+match (s2:Speaker) where s2.firstName = "Michelle"
+match (r:Room) where r.id = "Germany10"
+match (t:Talk) where t.id = "TALK17"
+create (a:Allocation { startDateTime:"2019-09-06T15:00:00:00.0000Z", endDateTime:"2019-09-06T17:00:00.0000Z"})
+-[:HELD_IN]->(r)
+create (a)-[:HAS_ASSIGNED]-> (s1)
+create (a)-[:HAS_ASSIGNED]-> (s2)
+create (a)-[:IS_ABOUT]->(t)
+
+
+
+"Information Technology"
+"Databases"
+"Cloud Computing"
+"Networking"
+"Kubernetes"
+"Service Mesh"
+"DevOps"
+"Frontend"
+"Single Page Application"
+"IPV6"
+"Security"
+"Load Balancer"
+
+
+"Connect from Browsers Using gRPC-Web"	"TALK8"
+"V Linkerd in Production 101 by Buoyant "	"TALK14"
+"Intro + Deep Dive: Apps SIG"	"TALK17"
+"LF Networking Reception"	"TALK42"
+"Real-time Vision Processing on Kubernetes: Working with Data Locality - Yisui Hu, Google "	"TALK61"
+"Experience Report: Running a Distributed System Across Kubernetes Clusters"	"TALK75"
+" Tutorial: Developing Production Ready Cloud Native NATS Applications"	"TALK76"
+"C Using Istio and GKE On Prem to Manage On-Prem Data Center Downtime and Maintenance"	"TALK77"
+"The Cloud Native Culture & Industry Summit by Oracle"	"TALK78"
+
+
+match (t:Topic {name: "Single Page Application"})
+match (ta:Talk {id : "TALK8"})
+create (t)<-[:BELONGS_TO]-(ta)
+
+match (t:Topic {name: "Service Mesh"})
+match (ta:Talk {id : "TALK14"})
+match (ta2:Talk {id : "TALK77"})
+create (t)<-[:BELONGS_TO]-(ta)
+create (t)<-[:BELONGS_TO]-(ta2)
+
+match (t:Topic {name: "Kubernetes"})
+match (ta1:Talk {id : "TALK77"})
+match (ta2:Talk {id : "TALK75"})
+match (ta3:Talk {id : "TALK61"})
+create (t)<-[:BELONGS_TO]-(ta1)
+create (t)<-[:BELONGS_TO]-(ta2)
+create (t)<-[:BELONGS_TO]-(ta3)
+
+
+match (t:Topic {name: "Cloud Computing"})
+match (ta1:Talk {id : "TALK76"})
+match (ta2:Talk {id : "TALK78"})
+create (t)<-[:BELONGS_TO]-(ta1)
+create (t)<-[:BELONGS_TO]-(ta2)
+
+match (t:Topic {name: "Service Mesh"})
+match (ta:Talk {id : "TALK14"})
+create (t)<-[:BELONGS_TO]-(ta)
+
+match (t:Topic {name: "Networking"})
+match (ta:Talk {id : "TALK42"})
+create (t)<-[:BELONGS_TO]-(ta);
+
+match (t:Topic {name: "Databases"})
+match (ta:Talk {id : "TALK78"})
+create (t)<-[:BELONGS_TO]-(ta);
+
+
+
+r.id
+0	"2019-09-10"	"2019-09-15"	"USA30"
+0	"2019-09-10"	"2019-09-15"	"USA29"
+0	"2019-09-10"	"2019-09-15"	"USA28"
+0	"2019-09-10"	"2019-09-15"	"USA27"
+0	"2019-09-10"	"2019-09-15"	"USA26"
+20	"2019-08-25"	"2019-08-29"	"USA35"
+20	"2019-08-25"	"2019-08-29"	"USA34"
+20	"2019-08-25"	"2019-08-29"	"USA33"
+20	"2019-08-25"	"2019-08-29"	"USA32"
+20	"2019-08-25"	"2019-08-29"	"USA31"
+22	"2019-09-09"	"2019-09-12"	"USA37"
+22	"2019-09-09"	"2019-09-12"	"USA39"
+22	"2019-09-09"	"2019-09-12"	"USA36"
+22	"2019-09-09"	"2019-09-12"	"USA3"
+22	"2019-09-09"	"2019-09-12"	"USA38"
+24	"2019-09-12"	"2019-09-13"	"England4"
+24	"2019-09-12"	"2019-09-13"	"England5"
+24	"2019-09-12"	"2019-09-13"	"England9"
+24	"2019-09-12"	"2019-09-13"	"England7"
+24	"2019-09-12"	"2019-09-13"	"England6"
+40	"2019-09-06"	"2019-09-11"	"Germany15"
+40	"2019-09-06"	"2019-09-11"	"Germany13"
+40	"2019-09-06"	"2019-09-11"	"Germany12"
+40	"2019-09-06"	"2019-09-11"	"Germany11"
+40	"2019-09-06"	"2019-09-11"	"Germany10"
+
+"Taylor"
+"Adnan"
+"Michelle"
+"David"
+"Jonathan Juares"
+"Ria"
+"Dan"
+

@@ -1,0 +1,7 @@
+query Conference {
+     Conference {
+        name
+        startDate
+        endDate
+    }
+}
