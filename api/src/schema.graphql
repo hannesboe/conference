@@ -11,5 +11,44 @@ type Location {
   address: String
   state: String
   city: String
+  rooms: [Room] @relation(name: "IN", direction: "BOTH")
+}
+
+type Room {
+  id: String
+  name: String
+  description: String
+  size: Int
+  allocations: [Allocation] @relation(name:"HELD_IN" , direction: "IN")
+}
+
+type Allocation {
+  endDate: String
+  startDate: String
+  room: [Room] @relation(name:"HELD_IN", direction: "OUT")
+  talk: [Talk] @relation(name:"IS_ABOUT", direction: "OUT")
+  speaker: [Speaker] @relation(name:"HAS_ASSIGNED", direction:"OUT") 
+}
+
+type Speaker {
+  firstName: String
+  lastName : String
+  company: String
+  role: String
+  mail: String
+}
+
+type Talk {
+  id: String
+  name: String
+  description: String
+  comission: String
+  type: String
+  topics: [Topic] @relation(name:"BELONGS_TO", direction:"BOTH")
+}
+
+type Topic {
+ name: String
+ talks: [Talk] @relation(name:"BELONGS_TO", direction:"BOTH")
 }
 

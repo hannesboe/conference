@@ -23,9 +23,9 @@ export default {
       return {
         navheaders: [
            {name : "Conferences", component : "Conference"},
-           {name: "Locations"},
-           {name: "Talks"},
-           {name: "Room-Flyer"} 
+           {name: "Locations", component: "Location"},
+           {name: "Talks", component: "Talk"},
+           {name: "Room-Flyer", component: "Flyer"} 
         ],
         activeComponent :  'Conference'
       }
