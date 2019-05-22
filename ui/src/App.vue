@@ -13,11 +13,15 @@
 
 <script>
 import Conference from './components/Conference.vue'
+import Location from './components/Location.vue'
+import Talk from './components/Talk.vue'
+import Flyer from './components/Flyer.vue'
+
 
 export default {
   name: 'app',
   components: {
-    Conference
+    Conference, Location, Talk, Flyer
   },
   data() {
       return {
@@ -27,7 +31,7 @@ export default {
            {name: "Talks", component: "Talk"},
            {name: "Room-Flyer", component: "Flyer"} 
         ],
-        activeComponent :  'Conference'
+        activeComponent :  ''
       }
   }
 }
@@ -50,7 +54,6 @@ export default {
 
 .content {
   margin: 40px;
-
 }
 
 .topnav a {

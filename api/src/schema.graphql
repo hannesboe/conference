@@ -12,6 +12,10 @@ type Location {
   state: String
   city: String
   rooms: [Room] @relation(name: "IN", direction: "BOTH")
+  talks: [Talk]
+  @cypher(
+    statement: "MATCH (this)-[*0..4]-(t:Talk) return t"
+  )
 }
 
 type Room {
@@ -23,8 +27,8 @@ type Room {
 }
 
 type Allocation {
-  endDate: String
-  startDate: String
+  endDateTime: String
+  startDateTime: String
   room: [Room] @relation(name:"HELD_IN", direction: "OUT")
   talk: [Talk] @relation(name:"IS_ABOUT", direction: "OUT")
   speaker: [Speaker] @relation(name:"HAS_ASSIGNED", direction:"OUT") 

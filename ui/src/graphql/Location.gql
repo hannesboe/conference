@@ -1,0 +1,11 @@
+query Location {
+     Location {
+        name
+        address
+        state
+        city
+        rooms {
+            name
+        }
+    }
+}

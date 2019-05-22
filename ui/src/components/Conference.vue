@@ -10,7 +10,6 @@
         <ul v-else>
           <li v-for="conference of data.Conference" class="conference-list-item" v-bind:key="conference">
             <span class="confnames">{{ conference.name }}</span><span>{{conference.startDate}} - {{conference.endDate}}</span>
-
           </li>
         </ul>
       </template>
@@ -21,6 +20,9 @@
 <script>
 
 export default {
+  data: {
+     Conference: {}
+  },
   data () {
     return {
     }

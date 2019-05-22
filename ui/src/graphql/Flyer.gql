@@ -1,0 +1,27 @@
+query Flyer {
+
+  Location {
+    name
+    state
+    city
+    rooms {
+      id
+      name
+      allocations(orderBy: startDateTime_asc) {
+        startDateTime
+        endDateTime
+        talk {
+          id
+          topics {
+            name
+          }
+        }
+        speaker {
+          firstName
+          lastName
+        }
+     }
+  }
+ }
+
+}

@@ -1,0 +1,11 @@
+query Talk {
+    Location {
+        name
+        state
+        city
+        talks {
+          name
+          description
+        }
+    }    
+}
