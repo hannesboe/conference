@@ -42,7 +42,7 @@ const defaultOptions = {
   // cache: myCache
 
   // Override the way the Authorization header is set
-  // getAuth: (tokenName) => ...
+  //getAuth: (tokenName) => { this.$auth.idToken }
 
   // Additional ApolloClient options
   // apollo: { ... }
@@ -104,10 +104,3 @@ export async function onLogout (apolloClient) {
     console.log('%cError on cache reset (logout)', 'color: orange;', e.message)
   }
 }
-
-
-
-
-
-
-

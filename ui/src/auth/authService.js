@@ -46,6 +46,7 @@ class AuthService extends EventEmitter {
     this.tokenExpiry = new Date(this.profile.exp * 1000);
 
     localStorage.setItem(localStorageKey, 'true');
+    localStorage.setItem("apollo-key", authResult.idToken);
 
     this.emit(loginEvent, {
       loggedIn: true,

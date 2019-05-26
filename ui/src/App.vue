@@ -1,6 +1,5 @@
 <template>
   <div id="conference-app">
-      <router-link to="/">Home</router-link>
       <nav class ="topnav">
           <a v-for="item in navheaders" v-bind:key="item.name" v-on:click="activeComponent=item.component">
               {{ item.name }}
@@ -11,7 +10,6 @@
       <div class="content">
          <component v-bind:is="activeComponent"/>
     </div>
-  <router-view></router-view>
   </div>
 </template>
 
