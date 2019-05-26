@@ -3,7 +3,7 @@
     <!-- Apollo Query -->
     <ApolloQuery :query="require('@/graphql/Conference.gql')">
       <!-- The result will automatically updated -->
-      <template slot-scope="{ result: { data, loading } }">
+      <template slot-scope="{ result: { data, loading, error } }">
         <!-- Some content -->
         <div v-if="loading">Loading...</div>
         <div v-else-if="error" class="error apollo">An error occured {{error}} </div>
@@ -20,24 +20,11 @@
 <script>
 
 export default {
-  data: {
-     Conference: {}
-  },
   data () {
     return {
+        Conference: []
     }
-  },
-
-  apollo: {
-  },
-
-  computed: {
-
-  },
-
-  methods: {
   }
-
 }
 </script>
 

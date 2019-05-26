@@ -1,10 +1,17 @@
 import Vue from 'vue'
 import App from './App.vue'
 import { createProvider } from './vue-apollo'
+import router from './router';
 
-Vue.config.productionTip = false
+// our plugin for authentication/authorization services
+import AuthPlugin from "./plugins/auth";
+
+Vue.use(AuthPlugin);
+
+Vue.config.productionTip = false;
 
 new Vue({
+  router,
   apolloProvider: createProvider(),
   render: h => h(App)
 }).$mount('#app')

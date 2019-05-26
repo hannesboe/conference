@@ -3,14 +3,14 @@
     <!-- Apollo Query -->
     <ApolloQuery :query="require('@/graphql/Flyer.gql')">
       <!-- The result will automatically updated -->
-      <template slot-scope="{ result: { data, loading } }">
+      <template slot-scope="{ result: { data, loading, error } }">
         <!-- Some content -->
         <div v-if="loading">Loading...</div>
         <div v-else-if="error" class="error apollo">An error occured {{error}} </div>
         <ul v-else>
-          <li v-for="location of data.Location" class="location-list-item" v-bind:key="location">
-            <span class="locationnames">{{ location.name }}</span><span>{{location.state}}, {{location.city}}</span>
-            <div v-for="room of location.rooms" v-bind:key="room">
+          <li v-for="l1 of data.Location" class="location-list-item" v-bind:key="l1">
+            <span class="locationnames">{{ l1.name }}</span><span>{{l1.state}}, {{l1.city}}</span>
+            <div v-for="room of l1.rooms" v-bind:key="room">
               <span>{{room.name}}</span><span>{{room.type}}:{{room.description}}</span>
 
               <div v-for="allocation of room.allocations" v-bind:key="allocation">
@@ -36,16 +36,12 @@
 <script>
 
 export default {
-    data: {
-     Location: {}
-  },
-    data () { return {
+    data () {
+        return {
+            Location: {}
     }
+  }
 }
-
-}
-
-
 </script>
 
 <style scoped>

@@ -1,13 +1,17 @@
 <template>
   <div id="conference-app">
-      <div class ="topnav">
+      <router-link to="/">Home</router-link>
+      <nav class ="topnav">
           <a v-for="item in navheaders" v-bind:key="item.name" v-on:click="activeComponent=item.component">
               {{ item.name }}
           </a>
-      </div>
+          <a v-if="!isAuthenticated" href="#" @click.prevent="login">Login</a>
+          <a v-if="isAuthenticated" href="#" @click.prevent="logout">Logout</a>
+      </nav>
       <div class="content">
          <component v-bind:is="activeComponent"/>
     </div>
+  <router-view></router-view>
   </div>
 </template>
 
@@ -17,7 +21,6 @@ import Location from './components/Location.vue'
 import Talk from './components/Talk.vue'
 import Flyer from './components/Flyer.vue'
 
-
 export default {
   name: 'app',
   components: {
@@ -25,16 +28,38 @@ export default {
   },
   data() {
       return {
+        isAuthenticated: false,
         navheaders: [
            {name : "Conferences", component : "Conference"},
            {name: "Locations", component: "Location"},
            {name: "Talks", component: "Talk"},
-           {name: "Room-Flyer", component: "Flyer"} 
+           {name: "Room-Flyer", component: "Flyer"},
         ],
         activeComponent :  ''
       }
+  },
+   async created() {
+    try {
+      await this.$auth.renewTokens();
+    } catch (e) {
+      console.log(e);
+    }
+  },
+    methods: {
+    login() {
+        this.$auth.login();
+    },
+    logout() {
+        this.$auth.logOut();
+    },
+     handleLoginEvent(data) {
+      this.isAuthenticated = data.loggedIn;
+      this.profile = data.profile;
+    }
   }
+
 }
+
 </script>
 
 <style>
