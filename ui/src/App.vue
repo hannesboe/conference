@@ -10,6 +10,8 @@
       <div class="content">
          <component v-bind:is="activeComponent"/>
     </div>
+    <router-view></router-view>
+
   </div>
 </template>
 
