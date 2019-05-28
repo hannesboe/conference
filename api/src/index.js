@@ -1,4 +1,4 @@
-import { typeDefs } from "./graphql-schema";
+import { typeDefs, resolvers } from "./schema.graphql";
 import { ApolloServer } from "apollo-server";
 import { v1 as neo4j } from "neo4j-driver";
 import { makeAugmentedSchema } from "neo4j-graphql-js";
@@ -16,7 +16,12 @@ dotenv.config();
  */
 
 const schema = makeAugmentedSchema({
-  typeDefs
+  typeDefs,
+  config: {
+    auth: {
+      isAuthenticated: true,
+    }
+  }
 });
 
 /*
@@ -39,7 +44,7 @@ const driver = neo4j.driver(
  * generated resolvers to connect to the database.
  */
 const server = new ApolloServer({
-  context: { driver },
+  context: ({req})=>{ return {driver, req, headers: req.headers };},
   schema: schema
 });
 

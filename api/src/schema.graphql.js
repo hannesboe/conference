@@ -1,3 +1,5 @@
+export const typeDefs = /* GraphQL */`
+
 type Conference {
   id: ID!
   name: String
@@ -6,7 +8,7 @@ type Conference {
   locations: [Location] @relation(name: "TAKES_PLACE", direction: "BOTH")
 }
 
-type Location {
+type Location @isAuthenticated {
   name: String
   address: String
   state: String
@@ -54,5 +56,5 @@ type Talk {
 type Topic {
  name: String
  talks: [Talk] @relation(name:"BELONGS_TO", direction:"BOTH")
-}
+}`
 

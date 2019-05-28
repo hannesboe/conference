@@ -17,9 +17,10 @@
     "apollo-link-http": "^1.5.7",
     "apollo-server": "^2.2.4",
     "dotenv": "^5.0.1",
+    "graphql-auth-directives": "^2.1.0",
     "graphql-tag": "^2.10.0",
     "neo4j-driver": "^1.7.2",
-    "neo4j-graphql-js": "^2.1.1",
+    "neo4j-graphql-js": "^2.6.1",
     "node-fetch": "^2.3.0"
   },
   "devDependencies": {
