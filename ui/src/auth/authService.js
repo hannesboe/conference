@@ -6,8 +6,8 @@ const webAuth = new auth0.WebAuth({
   domain: authConfig.domain,
   redirectUri: `${window.location.origin}/callback`,
   clientID: authConfig.clientId,
-  responseType: 'token id_token',
-  scope: 'openid profile email',
+  responseType: 'id_token',
+  scope: 'openid profile email https://conference.api',
   audience: 'https://conference-api'
 });
 const localStorageKey = 'loggedIn';

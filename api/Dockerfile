@@ -1,5 +1,7 @@
 FROM node:10
 
+ENV NEO4J_URI=http://neo4j-neo4j.persistence:7687
+
 RUN mkdir -p /app
 WORKDIR /app
 
