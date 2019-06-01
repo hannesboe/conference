@@ -7,9 +7,10 @@
         <!-- Some content -->
         <div v-if="loading">Loading...</div>
         <div v-else-if="error" class="error apollo">An error occured {{error}} </div>
+        <div v-else-if="!data || !data.Conference && !data.Conference.length"></div>
         <ul v-else>
-          <li v-for="conference of data.Conference" class="conference-list-item" v-bind:key="conference">
-            <span class="confnames">{{ conference.name }}</span><span>{{conference.startDate}} - {{conference.endDate}}</span>
+          <li v-for="conferenceObj of data.Conference" class="conference-list-item">
+            <span class="confnames">{{ conferenceObj.name }}</span><span>{{conferenceObj.startDate}} - {{conferenceObj.endDate}}</span>
           </li>
         </ul>
       </template>

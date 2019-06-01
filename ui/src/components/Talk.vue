@@ -7,6 +7,7 @@
         <!-- Some content -->
         <div v-if="loading">Loading...</div>
         <div v-else-if="error" class="error apollo">An error occured {{error}} </div>
+        <div v-else-if="!data || !data.Location || !data.Location.length">No results</div>
         <ul v-else>
           <li v-for="location of data.Location" class="location-list-item">
             <span class="locationnames">{{ location.name }}</span><span>{{location.state}}, {{location.city}}</span>
