@@ -13,6 +13,10 @@ spec:
         backend:
           serviceName: ui 
           servicePort: 8080
+      - path: /callback
+        backend:
+          serviceName: ui 
+          servicePort: 8080
   - host: conference-api.192.168.99.101.nip.io
     http:
       paths:
