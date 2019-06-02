@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 
-ENV VUE_APP_GRAPHQL_HTTP=http://conference-api.192.168.99.101.nip.io
+ENV VUE_APP_GRAPHQL_HTTP=http://conference-api.192.168.99.102.nip.io
 
 # install simple http server for serving static content
 RUN npm install -g http-server

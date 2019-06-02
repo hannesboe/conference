@@ -36,7 +36,7 @@ export default {
 .conference-list-item {
   padding: 10px;
   background-color: rgb(202, 197, 199);
-  width: 500px;
+  width: 1000px;
 }
 
 .conference-list-item span {

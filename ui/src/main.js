@@ -12,6 +12,6 @@ Vue.config.productionTip = false;
 
 new Vue({
   router,
-  apolloProvider: createProvider(),
+  apolloProvider: createProvider({"cors":"*"}),
   render: h => h(App)
 }).$mount('#app')

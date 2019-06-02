@@ -10,7 +10,7 @@
         <div v-else-if="!data || !data.Location || !data.Location.length">No results</div>
         <ul v-else>
           <li v-for="locationnames of data.Location" class="location-list-item">
-            <span class="locationnames">{{ locationnames.name }}</span><span>{{locationnames.state}}</span>
+            <span class="locationnames">{{ locationnames.name }} </span><span>({{locationnames.state}}-{{locationnames.city}})</span>
           </li>
         </ul>
       </template>
@@ -30,6 +30,21 @@ export default {
 </script>
 
 <style scoped>
+
+.location-main ul {
+    list-style-type: none;
+}
+
+.location-list-item {
+  padding: 10px;
+  background-color: rgb(202, 197, 199);
+  width: 1000px;
+}
+
+.location-list-item span:last-child {
+ color: crimson;
+ font-size: smaller;
+}
 
 </style>
 

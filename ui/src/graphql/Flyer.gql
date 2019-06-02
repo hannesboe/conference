@@ -1,5 +1,4 @@
 query Flyer {
-
   Location {
     name
     state
@@ -11,7 +10,7 @@ query Flyer {
         startDateTime
         endDateTime
         talk {
-          id
+          name
           topics {
             name
           }
@@ -19,9 +18,9 @@ query Flyer {
         speaker {
           firstName
           lastName
+          company
         }
-     }
+      }
+    }
   }
- }
-
 }
