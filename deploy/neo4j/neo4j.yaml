@@ -1,7 +1,12 @@
 acceptLicenseAgreement: "yes"
-image: stable/neo4j
+image: neo4j
+imageTag: 3.5.5-enterprise
 imagePullPolicy: IfNotPresent
 authEnabled: false
+metrics:
+  prometheus:
+    enabled: true
+    endpoint: localhost:2004    
 core:
   persistentVolume:
     size: 1Gi

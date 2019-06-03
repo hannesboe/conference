@@ -39,7 +39,7 @@ kubectl patch service --namespace persistence neo4j-neo4j --patch "$(cat neo4j/s
 
 ### api -server deplomynet
 
-local neo_cluster=bolt://neo4j-neo4j.persistence:768
+neo_cluster=bolt://neo4j-neo4j.persistence:768
 
 docker build -t conference-api:1 --build-arg NEO4J_URI=$neo_cluster --no-cache ../api/
 
@@ -50,20 +50,28 @@ kubectl apply -f api/service.yaml
 
 ### ui -server deployment
 
-docker build -t conference-ui:1 --build-arg VUE_APP_GRAPHQL_HTTP=http://$API_URL --no-cache ../ui/ 
+docker build -t conference-ui:1 --build-arg GRAPH_URI=http://$API_URL --no-cache ../ui/ 
 
 kubectl apply -f ui/deployment.yaml
+kubectl set env deployment/ui VUE_APP_GRAPHQL_HTTP=http://$API_URL
+
 kubectl apply -f ui/service.yaml
-
-### prometheus deployment
-
-
-
-### grafana depoyment
 
 
 
 ## ingress deployment
 
-sed -e "s/\UI_URL/$UI_URL/" -e "s/\API_URL/$API_URL/" ingress/ingress.yaml | kubectl apply -f -
+minikube addons enable ingress
 
+helm install --name ingress stable/nginx-ingress --namespace ingress-nginx --set controller.metrics.enabled=true
+
+sed -e "s/\UI_URL/$UI_URL/" -e "s/\API_URL/$API_URL/" ingress/ingress.yaml | kubectl apply -f - -n ingress-nginx
+
+
+# prometheus & grafana
+# https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/monitoring.md
+
+helm install stable/nginx-ingress --name nginx-controller --namespace nginx-ingress
+
+kubectl apply --kustomize github.com/kubernetes/ingress-nginx/deploy/prometheus/
+kubectl apply --kustomize github.com/kubernetes/ingress-nginx/deploy/grafana/
