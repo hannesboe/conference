@@ -19,6 +19,6 @@ spec:
         image: conference-ui:1 
         env:
         - name: VUE_APP_GRAPHQL_HTTP
-          value: "http://conference-api.192.168.99.101.nip.io"
+          value: "http://conference-api.192.168.99.102.nip.io"
         ports:
         - containerPort: 8080

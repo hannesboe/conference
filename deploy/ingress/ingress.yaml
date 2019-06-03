@@ -6,8 +6,8 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: conference-ui.192.168.99.101.nip.io
-    http:
+  - host: UI_URL
+    http: 
       paths:
       - path: /
         backend:
@@ -17,7 +17,7 @@ spec:
         backend:
           serviceName: ui 
           servicePort: 8080
-  - host: conference-api.192.168.99.101.nip.io
+  - host: API_URL
     http:
       paths:
       - path: /

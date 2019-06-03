@@ -17,12 +17,8 @@ spec:
       containers:
       - name: apollo
         image: conference-api:1 
-        env:
-        - name: NEO4J_URI
-          value: "http://neo4j-neo4j.persistence:7687"
-        - name: GRAPHQL_LISTEN_PORT
-          value: "4000"  
-        - name: GRAPHQL_URI
-          value: "http://apollo:4000"  
+        envFrom:    
+        - configMapRef:
+            name: apollo-config
         ports:
         - containerPort: 4000
