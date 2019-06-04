@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2019-06-04T16:31:46Z"
+  labels:
+    app: neo4j
+    chart: neo4j-1.0.0
+    component: core
+    heritage: Tiller
+    release: neo4j
+  name: neo4j-neo4j
+  namespace: persistence
+  resourceVersion: "23073"
+  selfLink: /api/v1/namespaces/persistence/services/neo4j-neo4j
+  uid: 3e888ba9-86e6-11e9-af89-0800278456a5
+spec:
+  ports:
+  - port: 7474
+    name: browser
+    protocol: TCP
+    targetPort: 7474
+  - port: 7687
+    name: bolt
+    protocol: TCP
+    targetPort: 7687
+  selector:
+    app: neo4j
+    component: core
+    release: neo4j
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

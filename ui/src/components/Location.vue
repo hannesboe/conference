@@ -1,5 +1,5 @@
 <template>
-  <div class="location-main">
+  <div class="location-main container">
     <!-- Apollo Query -->
     <ApolloQuery :query="require('@/graphql/Location.gql')">
       <!-- The result will automatically updated -->
@@ -8,11 +8,18 @@
         <div v-if="loading">Loading...</div>
         <div v-else-if="error" class="error apollo">An error occured {{error}} </div>
         <div v-else-if="!data || !data.Location || !data.Location.length">No results</div>
-        <ul v-else>
-          <li v-for="locationnames of data.Location" class="location-list-item">
-            <span class="locationnames">{{ locationnames.name }} </span><span>({{locationnames.state}}-{{locationnames.city}})</span>
-          </li>
-        </ul>
+        <table v-else class="highlight">
+            <thead>
+                <tr>
+                    <th><map-marker/>Location</th><th>state</th><th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+          <tr v-for="locationnames of data.Location">
+            <td class="locationnames">{{ locationnames.name }} </td><td>{{locationnames.state}}</td><td>{{locationnames.city}}</td>
+          </tr>
+            </tbody>
+        </table>
       </template>
     </ApolloQuery>
   </div>
@@ -30,21 +37,6 @@ export default {
 </script>
 
 <style scoped>
-
-.location-main ul {
-    list-style-type: none;
-}
-
-.location-list-item {
-  padding: 10px;
-  background-color: rgb(202, 197, 199);
-  width: 1000px;
-}
-
-.location-list-item span:last-child {
- color: crimson;
- font-size: smaller;
-}
 
 </style>
 

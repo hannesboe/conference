@@ -13,15 +13,15 @@ spec:
       - path: /
         backend:
           serviceName: ui 
-          servicePort: 8080
+          servicePort: 38080
       - path: /callback
         backend:
           serviceName: ui 
-          servicePort: 8080
+          servicePort: 38080
   - host: API_URL
     http:
       paths:
       - path: /
         backend:
           serviceName: apollo 
-          servicePort: 4000
+          servicePort: 34000

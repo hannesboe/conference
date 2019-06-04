@@ -1,33 +1,36 @@
 <template>
-  <div class="flyer-main">
+  <div class="flyer-main container">
     <!-- Apollo Query -->
     <ApolloQuery :query="require('@/graphql/Flyer.gql')">
       <!-- The result will automatically updated -->
       <template slot-scope="{ result: { data, loading, error } }">
         <!-- Some content -->
-        <div v-if="loading">Loading...</div>
+        <div v-if="loading" class="progress"><div class="indeterminate"></div></div>
         <div v-else-if="error" class="error apollo">An error occured {{error}} </div>
         <div v-else-if="!data || !data.Location || !data.Location.length">No results</div>
-        <ul v-else>
-          <li v-for="locationObj of data.Location" class="location-list-item">
-            <h2 class="locationnames">{{ locationObj.name }}, {{locationObj.state}}, {{locationObj.city}}</h2>
-            <div v-for="roomObj of locationObj.rooms">
-              <h3>{{roomObj.name}}</h3><span v-if="roomObj.type">Room Type:{{roomObj.type}}{{roomObj.description}}</span>
-              <div v-for="allocationObj of roomObj.allocations" class="allocation">
-                <span class="timeslot">{{getDateString(allocationObj.startDateTime)}} to {{getDateString(allocationObj.endDateTime)}}</span>
-                <div v-for="talkObj of allocationObj.talk" class="talks">
+        <ul v-else class="collection with-header">
+          <li v-for="locationObj of data.Location" class="">
+            <div class="locationnames collection-header"><h5>{{ locationObj.name }}, {{locationObj.state}}, {{locationObj.city}}</h5></div>
+            <div v-for="roomObj of locationObj.rooms" class="#f3e5f5 purple lighten-5 collection-body">
+            <div v-if="roomObj.allocations && roomObj.allocations.length" class="">
+              <div class="room"><span class="room-header">{{roomObj.name}}</span>
+              <div class="room-metadata"><span v-if="roomObj.description">{{roomObj.description}}</span>
+              <span v-if="roomObj.size">, Capacity:{{roomObj.size}}</span></div></div>
+              <div v-for="allocationObj of roomObj.allocations" class="card-panel hoverable blue lighten-4">
+                <span class="timeslot align-left">{{getDateString(allocationObj.startDateTime)}} to {{getDateString(allocationObj.endDateTime)}}</span>
+                <div  v-for="talkObj of allocationObj.talk" class="talks">
                    <span>{{talkObj.name}}</span>
                    <div v-if="talkObj.topics && talkObj.topics.length">
-                    Topics:
-                        <span v-for="topicObj of talkObj.topics">
-                                    <span>{{topicObj.name}}</span>
+                        <span  v-for="topicObj of talkObj.topics"  class="badge">
+                                    {{topicObj.name}}
                         </span>
                     </div>
 
                 </div>
-                <span v-for="speakerObj of allocationObj.speaker" class="speakers">
+                <div v-for="speakerObj of allocationObj.speaker" class="speakers blue-grey-text darken-1">
                 {{speakerObj.firstName}}, {{speakerObj.lastName}}
-                </span>
+                </div>
+              </div>
               </div>
             </div>
           </li>
@@ -39,11 +42,19 @@
 
 <script>
 
+
 export default {
     data () {
         return {
             Location: {}
-    }
+    }},
+    mounted() {
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems, options);});
+
+
   },
    methods : {
        getDateString: function(utcDateString) {
@@ -60,27 +71,34 @@ export default {
 
 <style scoped>
 
-.flyer-main ul {
-    list-style-type: none;
+.room {
+    padding:10px;
 }
 
-.location-list-item {
-  padding: 10px;
-  background-color: rgb(202, 197, 199);
-  width: 1000px;
+.room-header {
+    margin-left: 10px;
+    font-style: italic;
+    font-size: larger;
+    font-weight: bolder;
 }
-.flyer-main .timeslot {
-  font-style: oblique;
-  font-optical-sizing: auto;
-  font-size: 17px;
-  margin-left: 20px;
-  font-weight: bold;
+.room-metadata {
+    font-stretch: expanded;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+.timeslot {
+
+    font-weight: bolder;
+    margin: 5px;
+}
+.talks {
+    margin-left: 20px;
 }
 
-.allocation {
-  border: 1px;
-  border-style: inset;
-  background-color: #E7B3B3;
+.speakers {
+    margin-left: 20px;
+    font-style: italic;
+
 
 }
 

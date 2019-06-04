@@ -6,6 +6,8 @@ query Flyer {
     rooms {
       id
       name
+      size
+      description
       allocations(orderBy: startDateTime_asc) {
         startDateTime
         endDateTime

@@ -8,6 +8,13 @@ metrics:
     enabled: true
     endpoint: localhost:2004    
 core:
+  extraVars:
+  - name: NEO4J_dbms_security_procedures_whitelist
+    value: "apoc.*"
+  - name: NEO4J_metrics_prometheus_enabled
+    value: "true"
+  - name: NEO4J_metrics_prometheus_endpoint
+    value: "localhost:2004"
   persistentVolume:
     size: 1Gi
   initContainers:
@@ -26,7 +33,7 @@ core:
         curl -L https://github.com/neo4j-graphql/neo4j-graphql/releases/download/3.4.0.1/neo4j-graphql-3.4.0.1.jar -O &&
         cp neo4j-graphql-3.4.0.1.jar /plugins/
   - name: init-data
-    image: "conference_data:1"
+    image: "conference-data:1"
     imagePullPolicy: "IfNotPresent"
     volumeMounts:
     - name: datadir
@@ -36,3 +43,4 @@ core:
       - "-c" 
       - |
         cp -r /tmp/graph.db/ /data/databases/
+

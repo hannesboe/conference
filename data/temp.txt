@@ -198,7 +198,6 @@ create (t)<-[:BELONGS_TO]-(ta1)
 create (t)<-[:BELONGS_TO]-(ta2)
 create (t)<-[:BELONGS_TO]-(ta3)
 
-
 match (t:Topic {name: "Cloud Computing"})
 match (ta1:Talk {id : "TALK76"})
 match (ta2:Talk {id : "TALK78"})

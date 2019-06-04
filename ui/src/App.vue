@@ -1,11 +1,16 @@
 <template>
   <div id="conference-app">
-      <nav class ="topnav">
-          <a v-for="item in navheaders" v-bind:key="item.name" v-on:click="activeComponent=item.component">
-              {{ item.name }}
-          </a>
-          <a v-if="!isAuthenticated" href="#" @click.prevent="login">Login</a>
-          <a v-if="isAuthenticated" href="#" @click.prevent="logout">Logout</a>
+      <nav class="blue">
+          <div class="nav-wrapper">
+          <a href="#" class="brand-logo right">Conference</a>
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li v-for="item in navheaders" v-bind:key="item.name" v-on:click="activeComponent=item.component">
+              <a>{{ item.name }}</a>
+          </li>
+          <li class="right" v-if="!isAuthenticated" href="#" @click.prevent="login"><a>Login <account/> </a></li>
+          <li class="right" v-if="isAuthenticated" href="#" @click.prevent="logout"><a>Logout</a></li>
+          </ul>
+          </div>
       </nav>
       <div class="content">
          <component v-bind:is="activeComponent"/>
@@ -88,6 +93,10 @@ export default {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+.topnav a.login {
+  float:right;
 }
 
 .topnav a:hover {
