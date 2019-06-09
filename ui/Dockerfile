@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 
-ARG GRAPH_URI=http://conference-api.192.168.99.104.nip.io
+ARG GRAPH_URI=http://REPLACE
 
 ENV VUE_APP_GRAPHQL_HTTP=${GRAPH_URI}
 

@@ -1,0 +1,19 @@
+acceptLicenseAgreement: "yes"
+image: neo4j
+imageTag: 3.5.5-enterprise
+imagePullPolicy: IfNotPresent
+authEnabled: false
+metrics:
+  prometheus:
+    enabled: true
+    endpoint: localhost:2004    
+core:
+  extraVars:
+  - name: NEO4J_dbms_security_procedures_whitelist
+    value: "apoc.*"
+  - name: NEO4J_metrics_prometheus_enabled
+    value: "true"
+  - name: NEO4J_metrics_prometheus_endpoint
+    value: "localhost:2004"
+  persistentVolume:
+    size: 1Gi

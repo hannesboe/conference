@@ -1,0 +1,8 @@
+var eve = $('div.sched-container');
+
+eve.each(function(index) {
+  var curreobj =$(this)
+  var timeslot = curreobj.find("div.sched-event-details-timeandplace").immediateText().split(" - ");
+    console.log(curreobj.find("a.name").text().split(" - ")[0].trim() + ";"+ curreobj.find("div.sched-event-details > div.sched-event-type a").text().trim()  +";"+ curreobj.find("div.sched-event-details  div.tip-description").text().trim() +";" + curreobj.find("div.sched-event-details  ul.tip-custom-fields li:first-child a").text().trim() +";"+ timeslot[0].trim() + ";" + timeslot[0].trim().substring(0,timeslot[0].trim().length-6) + " " + timeslot[1].trim()+";"+curreobj.find("div.sched-event-details-timeandplace a").text())
+});
+

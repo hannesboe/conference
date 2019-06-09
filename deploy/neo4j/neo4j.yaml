@@ -16,7 +16,7 @@ core:
   - name: NEO4J_metrics_prometheus_endpoint
     value: "localhost:2004"
   persistentVolume:
-    size: 1Gi
+    size: 3Gi
   initContainers:
   - name: init-plugins
     image: "appropriate/curl:latest"
