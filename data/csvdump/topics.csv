@@ -1,0 +1,24 @@
+"id";"topic";"parent"
+1;"containers";
+2;"architecture";
+3;"deployment";4
+4;"kubernetes";2
+5;"enterprise use case";
+6;"operations";
+7;"rolling upgrades";3
+8;"monitoring";
+9;"autoscale";
+10;"metrics";
+11;"service mesh";
+12;"istio";11
+13;"config maps";16
+14;"secrets";16
+15;"persistent volumes";
+16;"application management";
+17;"self hosted";
+18;"logging";
+19;"fluentd";18
+20;"security";
+21;"identity management";20
+22;"continuous delivery";3
+23;"operators";3
