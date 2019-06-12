@@ -1,4 +1,3 @@
-acceptLicenseAgreement: "yes"
 image: neo4j
 imageTag: 3.5.5-enterprise
 imagePullPolicy: IfNotPresent
