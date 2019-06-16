@@ -1,0 +1,64 @@
+topicid;name;parentid
+topic1;Application ;
+topic2;AppOps;topic39
+topic3;Birds of a Feather;topic4
+topic4;BoF ;topic39
+topic5;Breaks ;
+topic6;Case Studies;
+topic7;CI;topic39
+topic8;Cluster Deployment Patterns;topic39
+topic9;Co;
+topic10;Community;
+topic11;Containers;topic7
+topic12;Continuous Integration ;topic7
+topic13;Customizing ;topic18
+topic14;Data ;
+topic15;Developer;
+topic16;Docs Sprint;
+topic17;Evening Event;
+topic18;Extending Kubernetes;
+topic19;Featured Session;
+topic20;Fun Run;
+topic21;Hybrid ;
+topic22;In Production;topic39
+topic23;Istio;topic50
+topic24;Keynote;
+topic25;Keynote Sessions;
+topic26;Kubernetes 101;
+topic27;Lightning Talk;
+topic28;Machine Learning ;
+topic29;Maintainers Track;
+topic30;Maintainer Track;
+topic31;Meet the Maintainer ;
+topic32;Meetup;
+topic33;Mentoring ;
+topic34;Mini Summit;
+topic35;Multi;
+topic36;Networking;
+topic37;Observability;topic39
+topic38;OCI Community F2F;
+topic39;Operations;
+topic40;Performance;topic37
+topic41;Policy ;topic18
+topic42;Pre;
+topic43;Project Office Hours;
+topic44;Project Salon;
+topic45;Public TOC Meeting;
+topic46;Registration;
+topic47;Runtimes;
+topic48;Security;topic39
+topic49;Serverless;
+topic50;Service Mesh;topic39
+topic51;Services;
+topic52;Social Event;
+topic53;Sponsor Showcase;
+topic54;Sponsor Showcase Open;
+topic55;Storage;
+topic56;The NewStack Pancake Breakfast ;
+topic57;Thursday;
+topic58;Trainings;
+topic59;Tutorial;topic58
+topic60;Wednesday;
+topic61;Wellbeing Activities;
+topic62;Wildcard;
+topic63;Workshop;

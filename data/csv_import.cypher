@@ -9,7 +9,7 @@ CREATE (t)<-[:IS_ABOUT]-(a)
 
 LOAD CSV WITH HEADERS FROM 'file:///2017_kubeSpeakers.csv' AS line FIELDTERMINATOR ';'
 MATCH (a:Allocation {talkid: line.talkid})
-CREATE (a)-[:HAS_ASSIGNED]->(s:Speaker {name: line.name, role: line.role});
+CREATE (a)-[:HAS_ASSIGNED]->(s:Speaker {name: line.name, role: line.role, bio: line.bio});
 
 CREATE (c:Conference {id: "id1", name: "KubeCon + CloudNativeCon North America 2017", startDate: "2017-12-04", endDate: "2017-12-08"})
 CREATE (c)-[:TAKES_PLACE]->(l:Location {id: "northamerica2017", state: "USA", city: "Texas", address: "Conference Location", zip: "73301"})
@@ -17,8 +17,13 @@ CREATE (c)-[:TAKES_PLACE]->(l:Location {id: "northamerica2017", state: "USA", ci
 match (r:Room) match (l:Location)
 CREATE (l)-[:IN]->(r)
 
-LOAD CSV WITH HEADERS FROM 'file:///topics.csv' AS line FIELDTERMINATOR ';'
-CREATE (t:Topic {id: line.id, topic: line.topic})
+LOAD CSV WITH HEADERS FROM 'file:///kubeTopicsTaxonomy.csv' AS line FIELDTERMINATOR ';'
+CREATE (t:Topic {id: line.topicid, topic: line.name})
 WITH t, line
-MATCH (h:Topic {id: line.parent})
+MATCH (h:Topic {id: line.parentid})
 create (h)-[:IS_PARENT]->(t);
+
+
+MATCH (ta:Talk), (to:Topic)
+where ta.type STARTS WITH to.topic
+CREATE (to)-[:IS_ABOUT]->(ta)

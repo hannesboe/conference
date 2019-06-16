@@ -1,0 +1,2 @@
+cat allTopics.csv | grep --only-matching -E "\"([A-Za-z0-9]+\s{0,1})+" | xargs -0 | sed -e 's/$/\"/' | sort | uniq > allTopicsSorted.csv
+
